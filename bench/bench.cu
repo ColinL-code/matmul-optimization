@@ -7,7 +7,7 @@
 #include <cmath>
 
 constexpr int N = 4096;
-constexpr int block_size = 16;
+constexpr int block_size = 32;
 constexpr int iters = 10;
 
 template<typename F>
@@ -102,7 +102,7 @@ int main() {
         if (std::fabs(h_C[i] - h_C_ref[i]) > 1e-3f) incorrect++;
     }
 
-    printf("N = %d\n", N);
+    printf("N = %d, Block size = %d\n", N, block_size);
     printf("naive:  %8.3f ms  %8.3f GFLOP/s\n", naive_ms, naive_gflops);
     printf("cuBLAS: %8.3f ms  %8.3f GFLOP/s\n", cublas_ms, cublas_gflops);
     printf("naive is %.2f%% of cuBLAS\n", 100.0 * naive_gflops / cublas_gflops);
