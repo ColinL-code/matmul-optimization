@@ -17,6 +17,6 @@ N = 4096, FP32, NVIDIA L4
 
 | Kernel | Block size | Time (ms) | GFLOP/s | % of cuBLAS (same run) |
 |---|---|---|---|---|
-| 1_naive (`x` indexes columns) | 32x32 | 112.429 | 1222.453 | 8.95% |
+| 1_naive (`x` indexes columns, current version) | 32x32 | 112.429 | 1222.453 | 8.95% |
 | 1_naive (`x` indexes rows) | 32x32 | 605.859 | 226.850 | 1.69% |
 
